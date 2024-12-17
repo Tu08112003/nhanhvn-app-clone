@@ -3,7 +3,8 @@
 </script>
 
 <template>
-  <div class="container">
+  <div class="main">
+    <div class="container">
     <div class="header">
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="150" height="125" />
     </div>
@@ -49,9 +50,18 @@
 
     </div>
   </div>
+  </div>
 </template>
 
 <style scoped>
+  .main{
+    height: 100%; 
+    width: 100%; 
+    background-color: #E2E6ED; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .container{
     width: 25rem;
     height: 41rem;
