@@ -6,7 +6,7 @@
   <div class="main">
     <div class="container">
     <div class="header">
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="150" height="125" />
+        <img alt="Nhanhvn Logo" class="logo" src="@/assets/logo.svg" width="140" height="100" />
     </div>
     <div class="form">
       <div class="form__input">
@@ -71,8 +71,10 @@
     display: grid;
     grid-template-rows: 5.5rem 1fr;
   }
-  .container .header{
-    text-align: center;
+  .container .header {
+      display: flex;
+      justify-content: center; 
+      align-items: center;   
   }
   .form{
     padding: 2rem;
