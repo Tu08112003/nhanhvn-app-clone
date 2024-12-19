@@ -10,44 +10,43 @@
     </div>
     <div class="form">
       <div class="form__input">
-          <span class="material-symbols-outlined">person</span>
-          <input type="text" placeholder="Tên đăng nhập"/>
+          <input type="email" placeholder="Email" required />
       </div>
       <div class="form__input">
-        <span class="material-symbols-outlined">key</span>
-      <input type="password" placeholder="Mật khẩu" />
+        <input type="password" placeholder="Mật khẩu" required />
       </div>
-      <div class="form__link">
-        <a href="#">Quên mật khẩu?</a>
+      <div class="form__text text--alert">
+        <ul>
+          <li>Có từ 8 ký tự trở lên, có ít nhất 1 ký tự viết hoa, 1 ký tự viết thường, 1 chữ số.</li>
+          <li>Mật khẩu không được giống tên đăng nhập.</li>
+        </ul>
       </div>
-      <div class="btn">
-        <router-link to="/home">
-          <button class="btn--login" type="submit">Đăng nhập</button>
-        </router-link>
+      <div class="form__input">
+        <input type="text" placeholder="Số điện thoại" required />
+      </div>
+      <div class="form__input">
+        <input type="text" placeholder="Thành phố" required />
       </div>
       <div class="form__text text--top">
-        <span> Hoặc đăng nhập với</span>
+        <input type="checkbox" >
+        <span>Đồng ý với các <a href="#">Chính sách quyền riêng tư</a> và <a href="#">Điều khoản sử dụng</a> của Nhanh.vn</span>  
+      </div>
+      <div class="btn">
+        <button class="btn--signup">Đăng ký</button>
+      </div>
+      <div class="form__text text-middle">
+        <span> Hoặc đăng ký với</span>
       </div>
       <div class="btn">
         <button class="btn--facebook"><i class="fa-brands fa-facebook fa-lg" style="color: #1d87d7;"></i><a href="#">Đăng nhập với Facebook</a></button>
         <button class="btn--google"><i class="fa-brands fa-google fa-lg" style="color: #de2121;"></i><a href="#">Đăng nhập với Google</a></button>
       </div>
-      <div class="form__text text--middle">
-        <span> Bạn chưa có tài khoản?</span>
-      </div>
-      <div class="btn">
-          <button routerlink to="/signup" class="btn--signup"><a href="/signup">Đăng ký</a></button>
-      </div>
       <div class="form__text text--bottom">
-        Bằng cách tiếp tục đăng nhập, bạn xác nhận đồng ý với các  
-        <span>
-          <a href="#">Chính sách quyền riêng tư</a>
-              và
-          <a href="#">Điều khoản sử dụng</a>
+        <span> 
+          Bạn đã có tài khoản? 
+            <a routerlink="/login" href="/login">Đăng nhập</a>
         </span>
-        <span>của Nhanh.vn</span>
       </div>
-
     </div>
   </div>
   </div>
@@ -55,7 +54,7 @@
 
 <style scoped>
   .main{
-    height: 100%; 
+    height: auto; 
     width: 100%; 
     background-color: #E2E6ED; 
     display: flex;
@@ -64,12 +63,14 @@
   }
   .container{
     width: 25rem;
-    height: 41rem;
+    height: 47rem;
+    background-color: #E2E6ED; 
     border: 2px solid var(--border-color);
     border-radius: 0.35rem;
     background-color: var(--white);
     display: grid;
     grid-template-rows: 5.5rem 1fr;
+    margin: 1rem;
   }
   .container .header {
       display: flex;
@@ -83,14 +84,13 @@
     gap: 1rem;
   }
   .form__input {
-    position: relative;
     width: 100%;
   }
 
   .form__input input {
     width: 100%; 
     height: 2.5rem;
-    padding: 0.5rem 3rem; 
+    padding: 0.5rem 1rem; 
     border-radius: 0.35rem;
     border: 2px solid var(--border-color);
     box-sizing: border-box; 
@@ -99,26 +99,34 @@
     border-color: var(--input-focus-border-color);
     outline: none;
   }
-
-  .form__input .material-symbols-outlined {
-    position: absolute;
-    left: 0.75rem; 
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--gray-600); 
-    font-size: 1.5rem; 
+  .form__text.text--alert{
+    border: 1px solid #82cdd6;
+    background-color: #e6f5f7;
+    border-radius: 0.35rem;
   }
-  .form__link{
+  .form__text.text--alert ul{
+    margin: 0.6rem 0;
+    padding: 0;
+  }
+  .form__text.text--alert ul li{
+    font-size: 0.82rem;
+    color: #036c79;
+    margin-left: 2rem;
+  }
+  .form__text.text--top{
     display: flex;
-    justify-content: flex-end;
+    gap: 1rem;
+    font-size: 0.82rem;
+    align-items: center;
   }
-  .form__link a{
-    text-decoration: none;
-    color: var(--link-color);
-    font-weight: 500;
+  .text--top a{
+    color: #0c83ff;
+    font-weight: 545;
   }
-  .form__link a:hover{
-    color: var(--link-hover-color);
+  .text--top input[type="checkbox"]:focus{
+    accent-color: #0c83ff;
+    border: 1px solid #0c83ff;
+    box-shadow: 0 0 0.2rem #0c83ff;
   }
   .btn button{
     width: 100%; 
@@ -132,14 +140,15 @@
   .btn button a{
     text-decoration: none;
   }
-  .btn .btn--login{
-    background-color: #4CAF50;
-    border-color: #4caf50;
+  .btn .btn--signup{
+    background-color: #0c83ff;
+    border: 1px solid #0c83ff;
     color: var(--white);
+    font-weight: 545;
   }
-  .btn--login:hover{
-    background-color: #289e2d;
-    border: 1px solid #289e2d;
+  .btn--signup:hover{
+    background-color: #0b76e6;
+    border: 1px solid #0b76e6;
   }
   .btn--facebook, .btn--google, .btn--signup{
     background-color: #f3f4f6;
@@ -160,48 +169,30 @@
   .btn--facebook{
     margin-bottom: 0.8rem;
   }
-  .form__text{
-    text-align: center;
-  }
-  .form__text.text--middle,
-  .form__text.text--top {
+  .form__text.text-middle {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center; 
     gap: 1rem;
+    text-align: center;
   }
-
-  .form__text.text--middle::before,
-  .form__text.text--middle::after,
-  .form__text.text--top::before,
-  .form__text.text--top::after {
+  .form__text.text-middle::before,
+  .form__text.text-middle::after {
     content: "";
     height: 1px;
     background-color: var(--gray-400);
     display: block;
   }
-
-  .form__text.text--middle span,
-  .form__text.text--top span {
+  .form__text.text-middle span {
     text-align: center;
   }
-  .btn .btn--signup{
-    background-color: #0c83ff;
-    border: 1px solid #0c83ff;
-  }
-  .btn--signup:hover{
-    background-color: #0b76e6;
-    border: 1px solid #0b76e6;
-  }
-  .btn--signup a{
-    color: var(--white);
-    font-weight: 545
-  }
+ 
   .text--bottom{
-    font-size: 0.75rem;
+    font-size: 0.82rem;
   }
   .text--bottom a{
     color: #0c83ff;
+    font-weight: 545;
   }
   .form__text.text--bottom {
     display: flex;

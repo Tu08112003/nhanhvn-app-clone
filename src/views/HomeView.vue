@@ -37,31 +37,31 @@
           <li>
               <a href="#">Sản phẩm</a>
               <ul class="subnav-product">
-                <li><a href="">Sản phẩm</a></li>
-                <li><a href="">Sàn TMĐT</a></li>
-                <li><a href="">Lô sản phẩm</a></li>
-                <li><a href="">Tồn kho</a></li>
-                <li><a href="">Thời gian lưu kho</a></li>
-                <li><a href="">Danh mục</a></li>
-                <li><a href="">Thương hiệu</a></li>
-                <li><a href="">Thuộc tính</a></li>
-                <li><a href="">Nhà cung cấp</a></li>
+                <li><a href=""><span class="material-symbols-outlined">deployed_code</span>Sản phẩm</a></li>
+                <li><a href=""><span class="material-symbols-outlined">arrow_selector_tool</span>Sàn TMĐT</a></li>
+                <li><a href=""><span class="material-symbols-outlined">deployed_code</span> Lô sản phẩm</a></li>
+                <li><a href=""><span class="material-symbols-outlined">garage_home</span>Tồn kho</a></li>
+                <li><a href=""><span class="material-symbols-outlined">schedule</span>Thời gian lưu kho</a></li>
+                <li><a href=""><span class="material-symbols-outlined">view_list</span>Danh mục</a></li>
+                <li><a href=""><span class="material-symbols-outlined">copyright</span>Thương hiệu</a></li>
+                <li><a href=""><span class="material-symbols-outlined">format_list_bulleted</span>Thuộc tính</a></li>
+                <li><a href=""><span class="material-symbols-outlined">home</span>Nhà cung cấp</a></li>
               </ul>
           </li>
           <li>
             <a href="#">Kho hàng</a>
             <ul class="subnav-warehouse">
-                <li><a href="">Xuất nhập kho</a></li>
-                <li><a href="">Chuyển kho</a></li>
-                <li><a href="">Kiểm kho</a></li>
-                <li><a href="">Phiếu nháp</a></li>
-                <li><a href="">Gói sản phẩm</a></li>
-                <li><a href="">Hạn mức tồn kho</a></li>
-                <li><a href="">Vị trí sản phẩm</a></li>
-                <li><a href="">Dự báo nhập hàng</a></li>
-                <li><a href="">Tổng công ty</a></li>
-                <li><a href="">Hàng lỗi</a></li>
-                <li><a href="">Lịch sử sửa, xóa</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Xuất nhập kho</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Chuyển kho</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Kiểm kho</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Phiếu nháp</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Gói sản phẩm</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Hạn mức tồn kho</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Vị trí sản phẩm</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Dự báo nhập hàng</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Tổng công ty</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Hàng lỗi</a></li>
+                <li><a href=""><span class="material-symbols-outlined">swap_horiz</span>Lịch sử sửa, xóa</a></li>
               </ul>
           </li>
           <li>
@@ -391,7 +391,7 @@
     max-width: 100%;
     color: white;
   }
-  .container ul{
+  .navbar-top .container ul{
     padding: 0;
     margin: 0;
     list-style: none;
