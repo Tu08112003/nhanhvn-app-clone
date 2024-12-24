@@ -4,47 +4,47 @@
 
 <template>
   <div class="main">
-    <div class="container">
-    <div class="header">
+    <div class="signup-container">
+    <div class="signup-header">
         <img alt="Nhanhvn Logo" class="logo" src="@/assets/logo.svg" width="140" height="100" />
     </div>
-    <div class="form">
-      <div class="form__input">
+    <div class="signup-form">
+      <div class="signup-form__input">
           <input type="email" placeholder="Email" required />
       </div>
-      <div class="form__input">
+      <div class="signup-form__input">
         <input type="password" placeholder="Mật khẩu" required />
       </div>
-      <div class="form__text text--alert">
+      <div class="signup-form__text text--alert">
         <ul>
           <li>Có từ 8 ký tự trở lên, có ít nhất 1 ký tự viết hoa, 1 ký tự viết thường, 1 chữ số.</li>
           <li>Mật khẩu không được giống tên đăng nhập.</li>
         </ul>
       </div>
-      <div class="form__input">
+      <div class="signup-form__input">
         <input type="text" placeholder="Số điện thoại" required />
       </div>
-      <div class="form__input">
+      <div class="signup-form__input">
         <input type="text" placeholder="Thành phố" required />
       </div>
-      <div class="form__text text--top">
+      <div class="signup-form__text text--top">
         <input type="checkbox" >
         <span>Đồng ý với các <a href="#">Chính sách quyền riêng tư</a> và <a href="#">Điều khoản sử dụng</a> của Nhanh.vn</span>  
       </div>
       <div class="btn">
         <button class="btn--signup">Đăng ký</button>
       </div>
-      <div class="form__text text-middle">
+      <div class="signup-form__text text-middle">
         <span> Hoặc đăng ký với</span>
       </div>
       <div class="btn">
         <button class="btn--facebook"><i class="fa-brands fa-facebook fa-lg" style="color: #1d87d7;"></i><a href="#">Đăng nhập với Facebook</a></button>
         <button class="btn--google"><i class="fa-brands fa-google fa-lg" style="color: #de2121;"></i><a href="#">Đăng nhập với Google</a></button>
       </div>
-      <div class="form__text text--bottom">
+      <div class="signup-form__text text--bottom">
         <span> 
           Bạn đã có tài khoản? 
-            <a routerlink="/login" href="/login">Đăng nhập</a>
+            <a routerlink="/" href="/">Đăng nhập</a>
         </span>
       </div>
     </div>
@@ -61,7 +61,7 @@
     justify-content: center;
     align-items: center;
   }
-  .container{
+  .signup-container{
     width: 25rem;
     height: 47rem;
     background-color: #E2E6ED; 
@@ -72,22 +72,22 @@
     grid-template-rows: 5.5rem 1fr;
     margin: 1rem;
   }
-  .container .header {
+  .signup-container .signup-header {
       display: flex;
       justify-content: center; 
       align-items: center;   
   }
-  .form{
+  .signup-form{
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  .form__input {
+  .signup-form__input {
     width: 100%;
   }
 
-  .form__input input {
+  .signup-form__input input {
     width: 100%; 
     height: 2.5rem;
     padding: 0.5rem 1rem; 
@@ -95,25 +95,25 @@
     border: 2px solid var(--border-color);
     box-sizing: border-box; 
   }
-  .form__input input:focus{
+  .signup-form__input input:focus{
     border-color: var(--input-focus-border-color);
     outline: none;
   }
-  .form__text.text--alert{
+  .signup-form__text.text--alert{
     border: 1px solid #82cdd6;
     background-color: #e6f5f7;
     border-radius: 0.35rem;
   }
-  .form__text.text--alert ul{
+  .signup-form__text.text--alert ul{
     margin: 0.6rem 0;
     padding: 0;
   }
-  .form__text.text--alert ul li{
+  .signup-form__text.text--alert ul li{
     font-size: 0.82rem;
     color: #036c79;
     margin-left: 2rem;
   }
-  .form__text.text--top{
+  .signup-form__text.text--top{
     display: flex;
     gap: 1rem;
     font-size: 0.82rem;
@@ -169,21 +169,21 @@
   .btn--facebook{
     margin-bottom: 0.8rem;
   }
-  .form__text.text-middle {
+  .signup-form__text.text-middle {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center; 
     gap: 1rem;
     text-align: center;
   }
-  .form__text.text-middle::before,
-  .form__text.text-middle::after {
+  .signup-form__text.text-middle::before,
+  .signup-form__text.text-middle::after {
     content: "";
     height: 1px;
     background-color: var(--gray-400);
     display: block;
   }
-  .form__text.text-middle span {
+  .signup-form__text.text-middle span {
     text-align: center;
   }
  
@@ -194,7 +194,7 @@
     color: #0c83ff;
     font-weight: 545;
   }
-  .form__text.text--bottom {
+  .signup-form__text.text--bottom {
     display: flex;
     flex-direction: column;
     text-align: center;

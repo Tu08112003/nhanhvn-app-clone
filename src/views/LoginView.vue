@@ -4,20 +4,20 @@
 
 <template>
   <div class="main">
-    <div class="container">
-    <div class="header">
+    <div class="login-container">
+    <div class="login-header">
         <img alt="Nhanhvn Logo" class="logo" src="@/assets/logo.svg" width="140" height="100" />
     </div>
-    <div class="form">
-      <div class="form__input">
+    <div class="login-form">
+      <div class="login-form__input">
           <span class="material-symbols-outlined">person</span>
           <input type="text" placeholder="Tên đăng nhập"/>
       </div>
-      <div class="form__input">
+      <div class="login-form__input">
         <span class="material-symbols-outlined">key</span>
       <input type="password" placeholder="Mật khẩu" />
       </div>
-      <div class="form__link">
+      <div class="login-form__link">
         <a href="#">Quên mật khẩu?</a>
       </div>
       <div class="btn">
@@ -25,20 +25,20 @@
           <button class="btn--login" type="submit">Đăng nhập</button>
         </router-link>
       </div>
-      <div class="form__text text--top">
+      <div class="login-form__text text--top">
         <span> Hoặc đăng nhập với</span>
       </div>
       <div class="btn">
         <button class="btn--facebook"><i class="fa-brands fa-facebook fa-lg" style="color: #1d87d7;"></i><a href="#">Đăng nhập với Facebook</a></button>
         <button class="btn--google"><i class="fa-brands fa-google fa-lg" style="color: #de2121;"></i><a href="#">Đăng nhập với Google</a></button>
       </div>
-      <div class="form__text text--middle">
+      <div class="login-form__text text--middle">
         <span> Bạn chưa có tài khoản?</span>
       </div>
       <div class="btn">
           <button routerlink to="/signup" class="btn--signup"><a href="/signup">Đăng ký</a></button>
       </div>
-      <div class="form__text text--bottom">
+      <div class="login-form__text text--bottom">
         Bằng cách tiếp tục đăng nhập, bạn xác nhận đồng ý với các  
         <span>
           <a href="#">Chính sách quyền riêng tư</a>
@@ -62,7 +62,7 @@
     justify-content: center;
     align-items: center;
   }
-  .container{
+  .login-container{
     width: 25rem;
     height: 41rem;
     border: 2px solid var(--border-color);
@@ -71,23 +71,23 @@
     display: grid;
     grid-template-rows: 5.5rem 1fr;
   }
-  .container .header {
+  .login-container .login-header {
       display: flex;
       justify-content: center; 
       align-items: center;   
   }
-  .form{
+  .login-form{
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  .form__input {
+  .login-form__input {
     position: relative;
     width: 100%;
   }
 
-  .form__input input {
+  .login-form__input input {
     width: 100%; 
     height: 2.5rem;
     padding: 0.5rem 3rem; 
@@ -95,12 +95,12 @@
     border: 2px solid var(--border-color);
     box-sizing: border-box; 
   }
-  .form__input input:focus{
+  .login-form__input input:focus{
     border-color: var(--input-focus-border-color);
     outline: none;
   }
 
-  .form__input .material-symbols-outlined {
+  .login-form__input .material-symbols-outlined {
     position: absolute;
     left: 0.75rem; 
     top: 50%;
@@ -108,16 +108,16 @@
     color: var(--gray-600); 
     font-size: 1.5rem; 
   }
-  .form__link{
+  .login-form__link{
     display: flex;
     justify-content: flex-end;
   }
-  .form__link a{
+  .login-form__link a{
     text-decoration: none;
     color: var(--link-color);
     font-weight: 500;
   }
-  .form__link a:hover{
+  .login-form__link a:hover{
     color: var(--link-hover-color);
   }
   .btn button{
@@ -160,29 +160,29 @@
   .btn--facebook{
     margin-bottom: 0.8rem;
   }
-  .form__text{
+  .login-form__text{
     text-align: center;
   }
-  .form__text.text--middle,
-  .form__text.text--top {
+  .login-form__text.text--middle,
+  .login-form__text.text--top {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center; 
     gap: 1rem;
   }
 
-  .form__text.text--middle::before,
-  .form__text.text--middle::after,
-  .form__text.text--top::before,
-  .form__text.text--top::after {
+  .login-form__text.text--middle::before,
+  .login-form__text.text--middle::after,
+  .login-form__text.text--top::before,
+  .login-form__text.text--top::after {
     content: "";
     height: 1px;
     background-color: var(--gray-400);
     display: block;
   }
 
-  .form__text.text--middle span,
-  .form__text.text--top span {
+  .login-form__text.text--middle span,
+  .login-form__text.text--top span {
     text-align: center;
   }
   .btn .btn--signup{
@@ -203,7 +203,7 @@
   .text--bottom a{
     color: #0c83ff;
   }
-  .form__text.text--bottom {
+  .login-form__text.text--bottom {
     display: flex;
     flex-direction: column;
     text-align: center;

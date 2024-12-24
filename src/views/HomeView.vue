@@ -25,7 +25,7 @@
                 <li><a href=""><span class="material-symbols-outlined">person</span> Tài khoản (Giám đốc)</a></li>
                 <li><a href=""><span class="material-symbols-outlined">settings</span> Cài đặt giao diện</a></li>
                 <li><a href=""><span class="material-symbols-outlined">notifications</span> Cài đặt nhận thông báo</a></li>
-                <li><a href=""><span class="material-symbols-outlined">power_settings_new</span> Đăng xuất</a></li>
+                <li><a routerlink="/" href="/"><span class="material-symbols-outlined">power_settings_new</span> Đăng xuất</a></li>
               </ul>
             </li>
           </ul>
