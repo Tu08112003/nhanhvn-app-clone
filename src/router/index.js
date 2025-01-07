@@ -1,24 +1,57 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/LoginView.vue'
-import SignupView from '../views/SignupView.vue'
+import Home from '../views/Home.vue'
+import Login from '../views/Login.vue'
+import Signup from '../views/Signup.vue'
+import DefaultLayout from '../layout/DefaultLayout.vue'
+import AuthLayout from '../layout/AuthLayout.vue'
+import AddBrand from '../views/AddBrand.vue'
+import ProductBrand from '../views/ProductBrand.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: LoginView,
+      component: DefaultLayout,
+      children: [
+        {
+          path: '',
+          name: 'login',
+          component: Login,
+        },
+        {
+          path: 'signup',
+          name: 'signup',
+          component: Signup,
+        },
+      ],
     },
     {
-      path: '/home',
-      name: 'home',
-      component: HomeView,
+      path: '/auth',
+      component: AuthLayout,
+      children: [
+        {
+          path: 'admin',
+          name: 'home',
+          component: Home,
+        },
+      ],
     },
     {
-      path: '/signup',
-      name: 'signup',
-      component: SignupView,
+      path: '/product',
+      component: AuthLayout,
+      children: [
+        {
+          path: 'brand',
+          name: 'brand',
+          component: ProductBrand,
+        },
+        {
+          path: 'addbrand',
+          name: 'addbrand',
+          component: AddBrand,
+        },
+      ],
     },
   ],
 })
