@@ -8,20 +8,20 @@
     <div class="login-header">
         <img alt="Nhanhvn Logo" class="logo" src="@/assets/logo.svg" width="140" height="100" />
     </div>
-    <div class="login-form">
+    <form class="login-form">
       <div class="login-form__input">
-          <span class="material-symbols-outlined">person</span>
+          <font-awesome-icon icon="fa-regular fa-user" class="icon"/>
           <input type="text" placeholder="Tên đăng nhập"/>
       </div>
       <div class="login-form__input">
-        <span class="material-symbols-outlined">key</span>
+        <font-awesome-icon icon="fa-solid fa-key" class="icon"/>
       <input type="password" placeholder="Mật khẩu" />
       </div>
       <div class="login-form__link">
         <a href="#">Quên mật khẩu?</a>
       </div>
       <div class="btn">
-        <router-link to="/home">
+        <router-link to="/auth/admin">
           <button class="btn--login" type="submit">Đăng nhập</button>
         </router-link>
       </div>
@@ -29,14 +29,16 @@
         <span> Hoặc đăng nhập với</span>
       </div>
       <div class="btn">
-        <button class="btn--facebook"><i class="fa-brands fa-facebook fa-lg" style="color: #1d87d7;"></i><a href="#">Đăng nhập với Facebook</a></button>
-        <button class="btn--google"><i class="fa-brands fa-google fa-lg" style="color: #de2121;"></i><a href="#">Đăng nhập với Google</a></button>
+        <button class="btn--facebook"><font-awesome-icon class="icon" icon="fa-brands fa-facebook" /><a href="#">Đăng nhập với Facebook</a></button>
+        <button class="btn--google"><font-awesome-icon class="icon" icon="fa-brands fa-google" /><a href="#">Đăng nhập với Google</a></button>
       </div>
       <div class="login-form__text text--middle">
         <span> Bạn chưa có tài khoản?</span>
       </div>
       <div class="btn">
-          <button routerlink to="/signup" class="btn--signup"><a href="/signup">Đăng ký</a></button>
+        <router-link to="/signup">
+          <button class="btn--signup"><a href="/signup">Đăng ký</a></button>
+        </router-link>
       </div>
       <div class="login-form__text text--bottom">
         Bằng cách tiếp tục đăng nhập, bạn xác nhận đồng ý với các  
@@ -48,7 +50,7 @@
         <span>của Nhanh.vn</span>
       </div>
 
-    </div>
+    </form>
   </div>
   </div>
 </template>
@@ -100,13 +102,13 @@
     outline: none;
   }
 
-  .login-form__input .material-symbols-outlined {
+  .login-form__input .icon{
     position: absolute;
     left: 0.75rem; 
     top: 50%;
     transform: translateY(-50%);
     color: var(--gray-600); 
-    font-size: 1.5rem; 
+    font-size: 1rem; 
   }
   .login-form__link{
     display: flex;
@@ -134,7 +136,7 @@
   }
   .btn .btn--login{
     background-color: #4CAF50;
-    border-color: #4caf50;
+    border: 1px solid #4caf50;
     color: var(--white);
   }
   .btn--login:hover{
@@ -154,8 +156,14 @@
     color: #1F2937;
     font-weight: 545;
   }
-  .btn--facebook i, .btn--google i{
+  .btn--facebook .icon, .btn--google .icon{
     margin-right: 0.7rem;
+  }
+  .btn--facebook .icon{
+    color: rgb(12, 131, 255);
+  }
+  .btn--google .icon{
+    color: rgb(239, 68, 68);
   }
   .btn--facebook{
     margin-bottom: 0.8rem;

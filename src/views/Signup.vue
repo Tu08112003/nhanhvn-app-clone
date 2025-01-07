@@ -8,7 +8,7 @@
     <div class="signup-header">
         <img alt="Nhanhvn Logo" class="logo" src="@/assets/logo.svg" width="140" height="100" />
     </div>
-    <div class="signup-form">
+    <form class="signup-form">
       <div class="signup-form__input">
           <input type="email" placeholder="Email" required />
       </div>
@@ -38,8 +38,8 @@
         <span> Hoặc đăng ký với</span>
       </div>
       <div class="btn">
-        <button class="btn--facebook"><i class="fa-brands fa-facebook fa-lg" style="color: #1d87d7;"></i><a href="#">Đăng nhập với Facebook</a></button>
-        <button class="btn--google"><i class="fa-brands fa-google fa-lg" style="color: #de2121;"></i><a href="#">Đăng nhập với Google</a></button>
+         <button class="btn--facebook"><font-awesome-icon class="icon" icon="fa-brands fa-facebook" /><a href="#">Đăng ký với Facebook</a></button>
+        <button class="btn--google"><font-awesome-icon class="icon" icon="fa-brands fa-google" /><a href="#">Đăng ký với Google</a></button>
       </div>
       <div class="signup-form__text text--bottom">
         <span> 
@@ -47,7 +47,7 @@
             <a routerlink="/" href="/">Đăng nhập</a>
         </span>
       </div>
-    </div>
+    </form>
   </div>
   </div>
 </template>
@@ -163,8 +163,17 @@
     color: #1F2937;
     font-weight: 545;
   }
-  .btn--facebook i, .btn--google i{
+  .btn--facebook .icon, .btn--google .icon{
     margin-right: 0.7rem;
+  }
+  .btn--facebook .icon, .btn--google .icon{
+    margin-right: 0.7rem;
+  }
+  .btn--facebook .icon{
+    color: rgb(12, 131, 255);
+  }
+  .btn--google .icon{
+    color: rgb(239, 68, 68);
   }
   .btn--facebook{
     margin-bottom: 0.8rem;
